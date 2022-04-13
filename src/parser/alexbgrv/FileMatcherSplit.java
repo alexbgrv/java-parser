@@ -34,12 +34,11 @@ public class FileMatcherSplit {
 
                 if (fileName.endsWith(".txt")) {
                     Writer txtFileResult = new Writer(getFinalPath + "\\" + fileName, true);
-                    changeFile(linesOfSplitTxtFile, txtFileResult);
                 }
                 else {
-                    Writer txtFileResult = new Writer(getFinalPath + "\\" + fileName + ".txt", true);
-                    changeFile(linesOfSplitTxtFile, txtFileResult);
+                    Writer txtFileResult = new Writer(getFinalPath + "\\" + fileName + ".txt", true);       
                 }
+                changeFile(linesOfSplitTxtFile, txtFileResult);
             }
         }
     }
@@ -56,14 +55,11 @@ public class FileMatcherSplit {
 
         if (fileName.endsWith(".csv")) {
             Writer csvFileResult = new Writer(getFinalPath + "\\" + fileName, true);
-
-            changeFile(linesOfTxtFile, arg, csvFileResult);
         }
         else {
             Writer csvFileResult = new Writer(getFinalPath + "\\" + fileName + ".csv", true);
-            pattern = Pattern.compile(LOGICAL_SPLIT_REGEX);
-            changeFile(linesOfTxtFile, arg, csvFileResult);
         }
+        changeFile(linesOfTxtFile, arg, csvFileResult);
 
     }
 
