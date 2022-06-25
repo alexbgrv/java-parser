@@ -1,2 +1,2 @@
-# Парсер на Java
+# Java - parser
 
